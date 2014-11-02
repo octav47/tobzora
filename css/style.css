@@ -132,19 +132,19 @@ a.pure-button-primary {
 
 .splash-container {
     background-image: url("../img/back.png");
-    z-index: 1;
+    /*z-index: 1;*/
     overflow: hidden;
     /*The following styles are required for the "scroll-over" effect */
     width: 100%;
     height: 100%;
     /*top: 0;*/
     /*left: 0;*/
-    position: fixed !important;
+    /*position: fixed !important;*/
 }
 
 .splash {
     /* absolute center .splash within .splash-container */
-    width: 100%;
+    width: 150%;
     height: 100%;
     margin: auto;
     position: relative;
@@ -155,6 +155,45 @@ a.pure-button-primary {
     /*text-align: left;*/
     text-transform: uppercase;
 }
+
+.splash, img {
+    text-align: center;
+    margin-top: 1%;
+}
+
+.splash span {
+    position: absolute;
+    text-align: center;
+}
+
+.splash-menu {
+    text-align: center;
+    position: relative;
+    margin-top: -1%;
+    margin-left: 3%;
+    width: 100%;
+    height: 100%;
+}
+
+.splash-text {
+    font-size: 12pt;
+    margin-top: -3%;
+    margin-left: 17%;
+    padding-bottom:100px;
+    width: 70%;
+    text-align:justify; /*выравнивание текста внутри колонок*/
+    column-count: 3; /*количество колонок, на которое хотим разбить текст*/
+    -moz-column-count: 3; /*для мозилы*/
+    -webkit-column-count: 3; /*для webkit браузеров*/
+    column-gap: 40px; /*отступ между колонками*/
+    -moz-column-gap: 40px;
+    -webkit-column-gap: 40px;
+}
+
+/*div.splash-text p {*/
+    /*display: inline; *//* Отображать как строчный элемент */
+    /*margin-right: 100px; *//* Отступ слева */
+/*}*/
 
 /* This is the main heading that appears on the blue section */
 .splash-head {
@@ -191,7 +230,6 @@ a.pure-button-primary {
     float: right;
 }
 
-
 .splash-other {
     position: fixed;
     text-align: right;
@@ -199,13 +237,7 @@ a.pure-button-primary {
     margin-top: 3%;
 }
 
-.splash-menu {
-    position: relative;
-    text-align: center;
-    margin-top: -15%;
-}
-
-.splash-menu span{
+.splash-menu span {
     text-align: center;
 }
 
@@ -216,9 +248,9 @@ a.pure-button-primary {
 .content-wrapper {
     /* These styles are required for the "scroll-over" effect */
     position: absolute;
-    top: 87%;
+    top: 100%;
     width: 100%;
-    min-height: 12%;
+    min-height: 100%;
     z-index: 2;
     background: white;
 
@@ -227,9 +259,12 @@ a.pure-button-primary {
 /* This is the class used for the main content headers (<h2>) */
 .content-head {
     font-weight: 400;
-    text-transform: uppercase;
+    width: 25%;
+    text-align: left;
+    color: #ffffff;
     letter-spacing: 0.1em;
-    margin: 2em 0 1em;
+    top: 3px;
+    left: 3px;
 }
 
 /* This is a modifier class used when the content-head is inside a ribbon */
@@ -272,6 +307,8 @@ a.pure-button-primary {
     /* We want to give the content area some more padding */
     .content {
         padding: 1em;
+        height: 100%;
+        width: 100%;
     }
 
     /* We can align the menu header to the left, but float the
